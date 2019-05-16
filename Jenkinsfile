@@ -18,7 +18,7 @@ pipeline {
     string(
       name: "TERRAFORM_VERSION",
       defaultValue: "0.11.13",
-      name: "TERRAFORM_VERSION"
+      description: "Terraform version you wish to build within a container."
     )
   }
 
