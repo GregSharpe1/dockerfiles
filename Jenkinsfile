@@ -24,6 +24,12 @@ pipeline {
 
   stages {
 
+    stage("Checkout SCM") {
+      steps {
+        checkout scm
+      }
+    }
+
     stage("Test") {
       steps {
         echo "${TERRAFORM_VERSION}"
