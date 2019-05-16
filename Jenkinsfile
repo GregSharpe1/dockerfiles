@@ -14,7 +14,7 @@ pipeline {
     TERRAFORM_VERSION="${params.TERRAFORM_VERSION}"
   }
 
-  params {
+  parameters {
     string(
       name: "TERRAFORM_VERSION",
       defaultValue: "0.11.13",
