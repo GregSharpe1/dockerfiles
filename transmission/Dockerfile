@@ -1,11 +1,10 @@
 FROM lsiobase/alpine:3.8
 
-# set version label
 ARG BUILD_DATE
 ARG VERSION
 
+# test
 RUN \
- echo "**** install packages ****" && \
  apk add --no-cache \
 	curl \
 	jq \
@@ -18,6 +17,5 @@ RUN \
 	unrar \
 	unzip
 
-# ports and volumes
 EXPOSE 9091 51413
 VOLUME /config /downloads /watch
