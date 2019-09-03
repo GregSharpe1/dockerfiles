@@ -8,7 +8,8 @@ RUN apk -v --update add \
     tar \
     bash
 
-RUN curl -L "https://github.com/jenkins-x/jx/releases/download/v2.0.666/jx-linux-amd64.tar.gz" | tar -zx
+RUN curl -L "https://github.com/jenkins-x/jx/releases/download/v$JX_VERSION/jx-linux-amd64.tar.gz" | tar -zx && \
+    mv jx /usr/bin/
 
-#ENTRYPOINT ["jx"]
-#CMD ["--help"]
+ENTRYPOINT ["jx"]
+CMD ["--help"]
